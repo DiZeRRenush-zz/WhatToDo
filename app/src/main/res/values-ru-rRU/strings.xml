@@ -1,0 +1,13 @@
+<resources>
+<string name="app_name">WhatToDO</string>
+<string name="home">Главная</string>
+<string name="achievement">Достижения</string>
+<string name="packs">Паки</string>
+<string name="profile">Профиль</string>
+<string name="setting">Настройки</string>
+<string name="sing_out">Выход</string>
+<string name="navigation_drawer_open">Открыть шторку</string>
+<string name="navigation_drawer_close">Закрыть шторку</string>
+<string name="nickname">НикНейм</string>
+<string name="avatar">Аватар</string>
+</resources>

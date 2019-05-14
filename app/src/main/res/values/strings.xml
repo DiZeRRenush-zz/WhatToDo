@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WharToDO</string>
+    <string name="home">Home</string>
+    <string name="achievement">Achievement</string>
+    <string name="packs">Packs</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="sing_out">Sing out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nickname">NickName</string>
+    <string name="avatar">avatar</string>
+</resources>
