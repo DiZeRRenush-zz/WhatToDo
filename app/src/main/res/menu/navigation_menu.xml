@@ -4,15 +4,6 @@
     tools:showIn="navigation_view">
 
     <item
-        android:gravity="center_horizontal"
-        android:id="@+id/nav_home"
-        android:title="@string/home" />
-    <item
-        android:layout_gravity="center"
-        android:id="@+id/nav_achievement"
-        android:title="@string/achievement"
-        />
-    <item
         android:layout_gravity="center"
         android:id="@+id/nav_packs"
         android:title="@string/packs" />

@@ -10,4 +10,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nickname">NickName</string>
     <string name="avatar">avatar</string>
+    <string name="map">Map</string>
+    <string name="menu">Menu</string>
 </resources>
