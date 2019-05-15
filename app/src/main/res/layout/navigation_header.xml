@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:orientation="vertical"
-    android:background="@color/colorGrey"
+    android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
