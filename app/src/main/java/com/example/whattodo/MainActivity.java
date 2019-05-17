@@ -1,54 +1,48 @@
 package com.example.whattodo;
-
-
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
-    protected void onCreate(Bundle savedInsranceState){
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        super.onCreate(savedInsranceState); setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.navigation);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.nav_ach:
+                    loadFragment(AchFragment.newInstance());
+                    return true;
+                case R.id.nav_map:
+                    loadFragment(MapFragment.newInstance());
+                    return true;
+                case R.id.nav_menu:
+                    loadFragment(MenuFragment.newInstance());
+                    return true;
+            }
+            return false;
+        }
+    };
 
+    private void loadFragment(Fragment fragment) {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.fl_content, fragment);
+        ft.commit();
     }
-
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        if (id == R.id.nav_home) {
-
-        } else if (id == R.id.nav_achievement) {
-
-        } else if (id == R.id.nav_packs) {
-
-        } else if (id == R.id.nav_profile) {
-
-        } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_sing_out) {
-
-        }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+        BottomNavigationView navigation = findViewById(R.id.nav_view);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        loadFragment(MapFragment.newInstance());
     }
+
 }

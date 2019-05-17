@@ -5,4 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name ="colorGrey">#B1B1B1</color>
     <color name ="colorProgress">#5AB55E</color>
+    <color name ="colorBlack">#00000f</color>
+    <color name ="colorGreen">#008477</color>
+    <color name ="colorDarkGrey">#737373</color>
+
 </resources>
