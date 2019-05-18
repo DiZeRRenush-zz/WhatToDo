@@ -12,4 +12,5 @@
     <string name="avatar">avatar</string>
     <string name="map">Map</string>
     <string name="menu">Menu</string>
+    <string name="google_maps_key">AIzaSyCmBDDHrnr-8UHxOIbsBbxYItvvRmebB84</string>
 </resources>
