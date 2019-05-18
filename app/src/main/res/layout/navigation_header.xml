@@ -36,14 +36,15 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="150dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progress_bar"
+        android:layout_width="200dp"
         android:layout_height="20dp"
         android:layout_alignBottom="@+id/avatar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
-        android:progressDrawable="@color/colorProgress" />
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="45"/>
 
 </RelativeLayout>
