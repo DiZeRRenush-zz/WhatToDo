@@ -13,7 +13,6 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -31,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
     private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView mPhoneView;
-    private EditText mPasswordView;
+    private AutoCompleteTextView mPasswordView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +56,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
 
         });
-
-        SignInButton = findViewById(R.id.btnLogin);
-        SignInButton.setOnClickListener(this);
     }
 
     private void attemptLogin() {
@@ -79,7 +75,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+        if (!isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.incorrect_password));
             focusView = mPasswordView;
             cancel = true;
