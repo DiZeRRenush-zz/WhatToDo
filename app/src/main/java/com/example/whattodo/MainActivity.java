@@ -2,12 +2,15 @@ package com.example.whattodo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+
+        NavigationView.OnNavigationItemSelectedListener{
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -19,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(AchFragment.newInstance(getApplicationContext()));
                     return true;
                 case R.id.nav_map:
-                    loadFragment(MapFragment.newInstance());
+                   loadFragment(MapsFragment.newInstance());
                     return true;
                 case R.id.nav_menu:
                     loadFragment(MenuFragment.newInstance());
@@ -31,18 +34,20 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.fl_content, fragment);
+        ft.replace(R.id.f_content, fragment);
         ft.commit();
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        loadFragment(MapsFragment.newInstance());
         BottomNavigationView navigation = findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        loadFragment(MapFragment.newInstance());
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        return false;
+    }
 }
