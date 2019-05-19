@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.nav_ach:
-                    loadFragment(AchFragment.newInstance());
+                    loadFragment(AchFragment.newInstance(getApplicationContext()));
                     return true;
                 case R.id.nav_map:
                    loadFragment(MapsFragment.newInstance());
