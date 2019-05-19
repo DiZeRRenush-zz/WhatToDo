@@ -12,5 +12,20 @@
     <string name="avatar">avatar</string>
     <string name="map">Map</string>
     <string name="menu">Menu</string>
+    <string name="email">Email</string>
+    <string name="phone_num">Phone number</string>
+    <string name="password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up.</string>
+    <string name="btn_link_to_login">Already registred! Login.</string>
+    <string name="welcome">Welcome</string>
+    <string name="name">Fullname</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="field_required">Field required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
     <string name="google_maps_key">AIzaSyCmBDDHrnr-8UHxOIbsBbxYItvvRmebB84</string>
 </resources>

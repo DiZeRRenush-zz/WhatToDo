@@ -12,5 +12,20 @@
     <string name="avatar">Аватар</string>
     <string name="map">Карта</string>
     <string name="menu">Меню</string>
+    <string name="email">Электронная почта</string>
+    <string name="phone_num">Номер телефона</string>
+    <string name="password">Пароль</string>
+    <string name="hint_name">ФИО</string>
+    <string name="btn_login">Вход</string>
+    <string name="btn_register">Регистрация</string>
+    <string name="btn_link_to_register">Нет аккаунта?Регистрация.</string>
+    <string name="btn_link_to_login">Есть аккаунт.Вход.</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="name">ФИО</string>
+    <string name="incorrect_password">Неправильный пароль</string>
+    <string name="field_required">Необходимо заполнить поле</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
     <string name="google_maps_key">AIzaSyCmBDDHrnr-8UHxOIbsBbxYItvvRmebB84</string>
 </resources>
