@@ -12,6 +12,7 @@ import android.widget.Button;
 public class MenuFragment extends Fragment implements
         OnClickListener{
     Button btn_packs;
+    Button btn_sing_out;
     public MenuFragment() {
     }
 
@@ -26,6 +27,8 @@ public class MenuFragment extends Fragment implements
 
         btn_packs = menuView.findViewById(R.id.btn_packs);
         btn_packs.setOnClickListener(this);
+        btn_sing_out = menuView.findViewById(R.id.btn_sing_out);
+        btn_sing_out.setOnClickListener(this);
 
 
         return menuView;

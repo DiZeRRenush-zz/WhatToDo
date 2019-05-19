@@ -26,8 +26,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
             "foo@example.com:hello", "bar@example.com:world"
     };
 
-
-
+    Button SignInButton;
+    Button btnLinkToRegisterScreen;
     private UserLoginTask mAuthTask = null;
 
     private AutoCompleteTextView mPhoneView;
@@ -37,6 +37,11 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        btnLinkToRegisterScreen = findViewById(R.id.btnLinkToRegisterScreen);
+        btnLinkToRegisterScreen.setOnClickListener(this);
+        SignInButton = findViewById(R.id.btnLogin);
+        SignInButton.setOnClickListener(this);
         mPhoneView = findViewById(R.id.phone_num);
         mPasswordView =findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -53,13 +58,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
         });
 
-        Button mPhoneSignInButton = findViewById(R.id.btnLogin);
-        mPhoneSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
+        SignInButton = findViewById(R.id.btnLogin);
+        SignInButton.setOnClickListener(this);
     }
 
     private void attemptLogin() {
@@ -118,6 +118,18 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener 
 
     @Override
     public void onClick(View v) {
+        Intent intent;
+        switch (v.getId()) {
+            case R.id.btnLinkToRegisterScreen:
+             intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
+            break;
+
+            case R.id.btnLogin:
+                attemptLogin();
+                break;
+
+        }
 
     }
 
