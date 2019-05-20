@@ -6,8 +6,6 @@
     <string name="profile">Профиль</string>
     <string name="setting">Настройки</string>
     <string name="sing_out">Выход</string>
-    <string name="navigation_drawer_open">Открыть шторку</string>
-    <string name="navigation_drawer_close">Закрыть шторку</string>
     <string name="nickname">НикНейм</string>
     <string name="avatar">Аватар</string>
     <string name="map">Карта</string>
@@ -24,9 +22,5 @@
     <string name="name">ФИО</string>
     <string name="incorrect_password">Неправильный пароль</string>
     <string name="field_required">Необходимо заполнить поле</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="registration_complete">Регистрация успешна</string>
-    <string name="google_maps_key">AIzaSyCmBDDHrnr-8UHxOIbsBbxYItvvRmebB84</string>
 </resources>
