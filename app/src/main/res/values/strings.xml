@@ -6,8 +6,6 @@
     <string name="profile">Profile</string>
     <string name="setting">Setting</string>
     <string name="sing_out">Sing out</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nickname">NickName</string>
     <string name="avatar">avatar</string>
     <string name="map">Map</string>
@@ -24,9 +22,5 @@
     <string name="name">Fullname</string>
     <string name="incorrect_password">Incorrect password</string>
     <string name="field_required">Field required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
     <string name="registration_complete">Registration complete</string>
-    <string name="google_maps_key">AIzaSyCmBDDHrnr-8UHxOIbsBbxYItvvRmebB84</string>
 </resources>
